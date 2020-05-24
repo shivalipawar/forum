@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - 10
+deploy:
+  provider: heroku
+  api_key:
+    secure: "4lcUpgMR7iz+e4ooF2dbx8T9Aft8Qfu/E19RaXk8U4kC0XJkE+eTcCWP5K5fahUYdVq2N
+VvHFZRsd2G2h3s1P1ItEvRToabcbDe2AN+j+HRhaTM85YO0mCUnUlpsq5wx4erxvq+B76iE4MfeuWBN1
+ucvF307uWKxjDyakKxLnBf4O37+ATkNtTbHSBuD3Xwkaro1vmqOiVjN39vctAcUjhUUMOPSwgwHzA5KX
+fM/5EGQjm65Nv6oTvlRZ5kG1rr4Vm0aFVHD5iJ2bKhxU8YGMUxe98wI5zcF8lX7myfCjkgY02xaqZO7y
+peCNm6RGQBgHK7i7N3eZFPT3LOrugl0qrGDKKstYQTTRR2KBC5vt/dijX2Qv6lIwc9PCJ32EryM+ioxm
+gICNimdeoAILiN2KZDYktYAznk1aq+LketvWLcwYs9XAltXd75/FEUfKjWRjq864cEHE+V1tT5w++Rjb
+UCEU9xTdik9dTuryoWj6nCRQrElgER0IRgrTzY9Z8cnHHbJ9MmWIh6HbkySFohQzav8JXMywkqRZOX2D
+PnARaWGvh+9Aw9YEv8xWlcyjB0jn6m17ORB95XI7itQMhSa65op0URw8isVF1y/rnBk22EMObN4BC2jJ
+5ceOYCq9d4INuN+ZWPp0QMo/AT7DIPGFt1a2D/JJ/RCWS+A1eprl6A="
