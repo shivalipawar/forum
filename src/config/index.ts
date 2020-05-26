@@ -7,5 +7,7 @@ if(!envFound){
 }
 
 export default {
-    port : process.env.PORT
+    port : process.env.PORT,
+    databaseUrl : process.env.DATABASE_URL as string,
+    jwtSecret : process.env.JWT_SECRET as string || "secret_key_to_be_longer_longer"
 }
