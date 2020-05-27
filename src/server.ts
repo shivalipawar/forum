@@ -7,15 +7,13 @@ import topicRoutes from "./routes/topic/topic";
 
 export const server = express();
 
-// parse requests of content-type - application/x-www-form-urlencoded
 server.use(bodyParser.urlencoded({ extended: true }))
 
-// parse requests of c=ontent-type - application/json
 server.use(bodyParser.json())
 
-connection.then(()=>{
+connection.then(() => {
     console.log("Successfully connected to the database");
-}).catch((err)=>{
+}).catch((err) => {
     console.log('Could not connect to the database. Exiting now...', err);
     process.exit();
 })
@@ -26,4 +24,4 @@ server.get('/health', (req, res) => {
 
 server.use(checkAuth);
 
-server.use('/topic',topicRoutes);
+server.use('/topic', topicRoutes);
