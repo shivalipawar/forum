@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import { connection } from "./config/db";
 import checkAuth from "./middleware/check-auth";
 import topicRoutes from "./routes/topic/topic";
+import questionRoutes from "./routes/question/question";
 
 export const server = express();
 
@@ -25,3 +26,4 @@ server.get('/health', (req, res) => {
 server.use(checkAuth);
 
 server.use('/topic', topicRoutes);
+server.use('/question', questionRoutes);

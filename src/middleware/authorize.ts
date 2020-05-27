@@ -5,12 +5,12 @@ const allowPrivileged = (role: String) => {
             if (res.locals.user.roles && res.locals.user.roles.indexOf(role) != -1) {
                 next();
             } else {
-                console.log("Unauthorized attempt made by ", res.role);
-                return res.status(401).json("You are not authorized check your role");
+                console.log("Unauthorized attempt made by ", res.locals.user.username);
+                return res.status(401).json({"message":"You are not authorized check your role"});
             }
         } catch (error) {
             console.log(error);
-            return res.status(500).json("You are not authorized check your role");
+            return res.status(500).json({"message":"You are not authorized check your role"});
         }
     }
     return allowed;
