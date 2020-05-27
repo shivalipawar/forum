@@ -5,6 +5,7 @@ import { connection } from "./config/db";
 import checkAuth from "./middleware/check-auth";
 import topicRoutes from "./routes/topic/topic";
 import questionRoutes from "./routes/question/question";
+import answerRoutes from "./routes/answer/answer";
 
 export const server = express();
 
@@ -27,3 +28,4 @@ server.use(checkAuth);
 
 server.use('/topic', topicRoutes);
 server.use('/question', questionRoutes);
+server.use('/answer', answerRoutes);
