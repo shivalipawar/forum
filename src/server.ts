@@ -6,6 +6,7 @@ import checkAuth from "./middleware/check-auth";
 import topicRoutes from "./routes/topic/topic";
 import questionRoutes from "./routes/question/question";
 import answerRoutes from "./routes/answer/answer";
+import feedRoutes from "./routes/feed/feed";
 
 export const server = express();
 
@@ -29,3 +30,4 @@ server.use(checkAuth);
 server.use('/topic', topicRoutes);
 server.use('/question', questionRoutes);
 server.use('/answer', answerRoutes);
+server.use('/feed', feedRoutes);
