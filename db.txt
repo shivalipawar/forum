@@ -1,0 +1,25 @@
+CREATE TABLE topic(
+	topic_id serial PRIMARY KEY,
+	topic_name VARCHAR (500) NOT NULL,
+	user_id integer NOT NULL,
+	username VARCHAR (355) NOT NULL,
+	created_on TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+CREATE TABLE answer(
+	topic_id INTEGER REFERENCES topic(topic_id),
+    question_id serial PRIMARY KEY,
+	question_name VARCHAR (500) NOT NULL,
+	user_id integer NOT NULL,
+	username VARCHAR (355) NOT NULL,
+	created_on TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
+
+CREATE TABLE answer(
+	question_id INTEGER REFERENCES question(question_id),
+	answer_id serial PRIMARY KEY,
+	answer VARCHAR (500) NOT NULL,
+	user_id integer NOT NULL,
+	username VARCHAR (355) NOT NULL,
+	created_on TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)
